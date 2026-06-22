@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Escarificación</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Tinos, Tinos;
+  background: #FFFFFF;
+  font-size: 12px;
+  
+}
+
+/* Layout general */
+.layout {
+  display: flex;
+  width: 100%;
+  min-height: 97vh;
+}
+
+/* Sidebar izquierda (fuera del azul) */
+.sidebar {
+  width: 200px;
+  background: #1E3A8A;
+  padding: 5px;
+}
+
+.sidebar h3 {
+  background: #1E3A8A;
+  padding: 5px;
+}
+
+.box {
+  background: #1E3A8A;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+/* Zona derecha (azul) */
+.main-area {
+  flex: 1;
+  background: #F1F5F9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra superior */
+.top-bar {
+  background: #0F172A;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+/* Menú */
+.menu a {
+  background: #0F172A;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Contenido */
+.content {
+  flex: 1;
+  padding: 5px;
+  display: flex; 
+}
+
+/* Caja blanca */
+.paper {
+  background: #F8F9FA;
+  padding: 10px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Espaciado */
+h2 {
+  margin-top: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- COLUMNA IZQUIERDA -->
+  <aside class="sidebar">
+
+    <h3></h3>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Logo-2016-solo-ok.png" width="70">
+    
+  <img src="https://raw.githubusercontent.com/VICHAS-234/logos/refs/heads/main/ing-agronoma.png" width="70">
+
+     <h3 style="font-size:18px; color: #FFFFFF;"> INFORMACIÓN</h3>
+
+<div class="box" style="font-size:15px; color: #FFFFFF;">
+  CURSO: Producción y tecnología de semillas
+</div>
+
+<div class="box" style="font-size:15px; color: #FFFFFF;">
+  DOCENTE: Flavio Lozano Isla
+</div>
+<div class="box" style="font-size:14px; color: #FFFFFF;">
+  INTEGRANTES DEL GRUPO:
+  <br>- Campos Troyes, Edgar Orlando
+  <br>- Chasquibol Goñas, Eros Daniel
+  <br>- Lalanqui Peña, Jefferson Ivan
+  <br>- Ramos Briceño, Ivan
+  <br>- Santillan Gil, Isaac Gilardy
+</div>
+
+
+<h3 style="font-size:18px; color: #FFFFFF;"> MATERIAL COMPLEMENTARIO</h3>
+
+<div class="box">
+
+  <table>
+    <tr>
+
+       <td>
+        <a href="https://docs.google.com/document/d/10TdTn3tGNPsoxY3x7EpWbrRKfc_Ht83LwwzMG2WvKc0/edit?tab=t.0#heading=h.lib7l0r6l9sm"
+           target="_blank"
+           title="Informe">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Google_Docs_icon_%282026%29.svg" width="35">
+        </a>
+      </td>
+
+    <td>
+        <a href="https://docs.google.com/spreadsheets/d/1rnfI5GubetNELa6mLWgp4UGKzIpJlTmaXZTuS5ZE3CI/edit?pli=1&gid=112042476#gid=112042476"
+           target="_blank"
+           title="Base de datos">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Google_Sheets_2020_Logo.svg" width="35">
+        </a>
+      </td>
+
+     <td>
+        <a href="https://docs.google.com/presentation/d/1N9XUOsyVRGLEGyyaB20WBW_Le-46Js5pQ-_viCv5_DE/edit?usp=sharing"
+           target="_blank"
+           title="Presentación">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Google_Slides_2020_Logo.svg" width="35">
+        </a>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a href="https://drive.google.com/drive/folders/1QqNoN--DhxiWWA4LRiZzpGM5luRMWVsS?usp=sharing"
+           target="_blank"
+           title="Archivos complementarios">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg" width="35">
+        </a>
+      </td>
+
+        <td>
+        <a href="https://github.com/EOCT-234/Escarificaci-n_U2"
+           target="_blank"
+           title="Repositorio">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" width="35">
+        </a>
+      </td>
+    </tr>
+
+  </table>
+</div>
+
+</aside>
+
+  <!-- ZONA DERECHA -->
+  <div class="main-area">
+
+    <header class="top-bar">
+
+  <h1 style= "font-size:28px; color:  #ffffff;">Procesos de germinación de semillas usando métodos de escarificación</h1>
+
+  <nav class="menu" style="text-align:center;">
+
+  <!-- FILA 1 -->
+  <div>
+     <a href="resumen.html"  target="contenido"  style="font-size:14px; color:#e8f5ec;"> Resumen gráfico </a>
+    <a href="introduccion.html"  target="contenido" style="font-size:14px; color:#e8f5ec;">Introducción</a>
+    <a href="materiales_metodos.html"  target="contenido" style="font-size:14px; color:#e8f5ec; margin-right:15px;">Materiales y métodos</a>
+    <a href="resultados_discusiones"  target="contenido" style="font-size:14px; color:#e8f5ec;">Resultado y discusiones</a>
+  </div>
+
+  <!-- FILA 2 -->
+  <div style="margin-top:5px;">
+    <a href="conclusiones.html"  target="contenido" style="font-size:14px; color:#e8f5ec; margin-right:15px;">Conclusiones</a>
+    <a href="referencias.html"  target="contenido" style="font-size:14px; color:#e8f5ec;">Referencias</a>
+  </div>
+
+</nav>
+
+</header>
+
+    <main class="content">
+      <div class="paper">
+<iframe name="contenido"
+        src="resumen.html"
+        style="width:100%; height:100%; border:none;">
+</iframe>
+        
+        
+      </div>
+    </main>
+
+  </div>
+
+</div>
+
+</body>
+</html>
