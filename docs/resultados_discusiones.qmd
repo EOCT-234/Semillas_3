@@ -15,38 +15,42 @@ editor:
 Los resultados mostraron poco efecto estadístico del envejecimiento acelerado en la germinación, pero logró afectar a la uniformidad de este proceso.
 En el PCA se observó que a mayor envejecimiento los resultados de germinación y la longitud de radícula disminuyen, mostrando que se pierde viabilidad.
 
-## Índices de germinación 
+## Índices de germinación
 
-El porcentaje de germinación (Figura 1a) no se obtuvo diferencias significativas, pero el tratamiento de 72 horas de envejecimiento fue más bajo con un porcentaje del 91%.
-Se refleja que los diferentes tiempos de envejecimiento no fueron suficiente para ocasionar daños irreversibles en la semilla y con la hidratación constante en los tapers lograron germinar aunque con ritmos diferentes (Pérez-Sánchez et al., 2026).
-El tiempo medio de germinación (Figura 1b) estuvo entre 55 y 61 horas luego de la siembra en los tapers y se observó una tendencia a aumentar en los tratamientos de 24 y 48 horas.
+El porcentaje de germinación ([Figura 1a](https://docs.google.com/document/d/1ICAiqg4wwwSi24-wrgR5gp1tDRnncDySjDZf6xn9cgI/edit?tab=t.ijnpmvr7wfi5#bookmark=kix.4j629ra8gwgd)) no se obtuvo diferencias significativas, pero el tratamiento de 72 horas de envejecimiento fue más bajo con un porcentaje del 91%.
+Se refleja que los diferentes tiempos de envejecimiento no hfueron suficiente para ocasionar daños irreversibles en la semilla y con la hidratación constante en los tapers lograron germinar aunque con ritmos diferentes [(Pérez-Sánchez et al., 2026)](https://www.zotero.org/google-docs/?Oui09X).
+
+El tiempo medio de germinación ([Figura 1b](https://docs.google.com/document/d/1ICAiqg4wwwSi24-wrgR5gp1tDRnncDySjDZf6xn9cgI/edit?tab=t.ijnpmvr7wfi5#bookmark=kix.4j629ra8gwgd)) estuvo entre 55 y 61 horas luego de la siembra en los tapers y se observó una tendencia a aumentar en los tratamientos de 24 y 48 horas.
 Pero no se logró observar diferencias significativas.
-La falta de diferencias estadísticas significativas se debe principalmente a la alta viabilidad de las semillas; pero, los tejidos dañados necesitan repararse por lo que el tiempo requerido para la germinación aumenta (Pérez-Sánchez et al., 2026).
-La velocidad de germinación (Figura 1c) no cambió entre los tratamientos de envejecimiento.
-Si bien el envejecimiento generó una dispersión de los datos en los días de evaluación, las semillas con alto vigor inicial logran mantener los efectos de la degradación con los métodos de envejecimiento acelerado a corto plazo (Wang et al., 2021).
-El Índice de sincronía de germinación (Figura 1d) es más alto en el tratamiento control (0 horas).
+La falta de diferencias estadísticas significativas se debe principalmente a la alta viabilidad de las semillas; pero, los tejidos dañados necesitan repararse por lo que el tiempo requerido para la germinación aumenta [(Pérez-Sánchez et al., 2026)](https://www.zotero.org/google-docs/?EOCyTZ).
+
+La velocidad de germinación ([Figura 1c](https://docs.google.com/document/d/1ICAiqg4wwwSi24-wrgR5gp1tDRnncDySjDZf6xn9cgI/edit?tab=t.ijnpmvr7wfi5#bookmark=kix.4j629ra8gwgd)) no cambió entre los tratamientos de envejecimiento.
+Si bien el envejecimiento generó una dispersión de los datos en los días de evaluación, las semillas con alto vigor inicial logran mantener los efectos de la degradación con los métodos de envejecimiento acelerado a corto plazo [(Wang et al., 2021)](https://www.zotero.org/google-docs/?qY5hqO).
+
+El Índice de sincronía de germinación ([Figura 1d](https://docs.google.com/document/d/1ICAiqg4wwwSi24-wrgR5gp1tDRnncDySjDZf6xn9cgI/edit?tab=t.ijnpmvr7wfi5#bookmark=kix.4j629ra8gwgd)) es más alto en el tratamiento control (0 horas).
 Asimismo, se observa una relación con el aumento de horas de envejecimiento: en el tratamiento de 24 horas el índice fue de 0.63, el tratamiento de 48 horas disminuyó más (0.49) y el tratamiento de 72 horas obtuvo un índice de 0.44.
 Este índice de sincronía de germinación muestra que aunque las semillas siguen germinando, el tiempo de envejecimiento es menos uniforme.
-Aquí se observa claramente que aunque no hubo daño interno significativo, las semillas pierden la capacidad de germinar de forma simultánea, evidenciando pérdida de calidad biológica de las semillas (Wang et al., 2021).
+Aquí se observa claramente que aunque no hubo daño interno significativo, las semillas pierden la capacidad de germinar de forma simultánea, evidenciando pérdida de calidad biológica de las semillas [(Wang et al., 2021)](https://www.zotero.org/google-docs/?7QepMa).
 
 **Figura 1: Índices de germinación calculados.** *(a) Porcentaje de germinación (grp). (b) Tiempo medio de germinación (mgt). (c) Velocidad de germinación (gsp). (d) Índice de sincronía de germinación.*
 
 ## Vigor de las semillas
 
-Los resultados de la longitud de la radícula (Figura 2) son consistentes - no hubo diferencias significativas - con los resultados de los índices de germinación.
+Los resultados de la longitud de la radícula ([Figura 2](https://docs.google.com/document/d/1ICAiqg4wwwSi24-wrgR5gp1tDRnncDySjDZf6xn9cgI/edit?tab=t.ijnpmvr7wfi5#bookmark=kix.tels4oy1q874)) son consistentes - no hubo diferencias significativas - con los resultados de los índices de germinación.
 Sin embargo, el promedio de la longitud de la radícula tiende a disminuir a medida que la semilla es sometida a mayor tiempo de envejecimiento.
-Al tener que desviar energía a la reparación celular durante la imbibición, la elongación celular disminuye el crecimiento de la radícula (González Rodríguez et al., 2018).
+Al tener que desviar energía a la reparación celular durante la imbibición, la elongación celular disminuye el crecimiento de la radícula [(González Rodríguez et al., 2018)](https://www.zotero.org/google-docs/?JY4Yyv).
 
 **Figura 2: Longitud media de la radícula.**
 
 ## PCA entre la germinación y el vigor de las semillas
 
-El PCA muestra la distribución de las variables y el comportamiento de los tratamientos (Figura 3).
+El PCA muestra la distribución de las variables y el comportamiento de los tratamientos ([Figura 3](https://docs.google.com/document/d/1ICAiqg4wwwSi24-wrgR5gp1tDRnncDySjDZf6xn9cgI/edit?tab=t.ijnpmvr7wfi5#bookmark=kix.wz25vgsnh5mh)).
 El tratamiento de 24 horas tiene mayor porcentaje de germinación, pero las semillas pierden velocidad de germinación.
 A 48 horas de envejecimiento, tiene mayor tiempo medio de germinación a comparación con el tratamiento de 0 horas.
 Las semillas demoran más en germinar.
+
 Con 72 horas todas las variables caen respecto de los demás tratamientos.
 Además que tardan más en germinar, la longitud de radícula es más baja.
 Se demuestra que el estrés afecta lentamente los componentes del vigor antes de que la viabilidad se pierda totalmente de las semillas.
 
-**Figura 3: Índices de germinación calculados.** *(a) Distribución de variables. (b) Distribución de tratamientos.*
+**Figura 3: PCA.** *(a) Distribución de variables. (b) Distribución de tratamientos.*
