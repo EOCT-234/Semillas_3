@@ -9,7 +9,7 @@ format:
 
 # Referencias
 
-Asrat, U., & Abera, D. (2025). Production and overall importance of common bean (*Phaseolus vulgaris* L.) in Ethiopia. Cogent Food & Agriculture, 11(1), 2548619. <https://doi.org/10.1080/23311932.2025.2548619> 
+Asrat, U., & Abera, D. (2025). Production and overall importance of common bean (*Phaseolus vulgaris* L.) in Ethiopia. Cogent Food & Agriculture, 11(1), 2548619. [https://doi.org/10.1080/23311932.2025.2548619](https://www.tandfonline.com/doi/full/10.1080/23311932.2025.2548619){.uri} 
 
 Gamarra, M. (2021). Desarrollo de una nueva variedad de frijol arbustivo, clase comercial poroto, para expandido denominado INIA-Huayna. Revista de investigación Agropecuaria Science and Biotechnology, 1(4), 18-29. <https://doi.org/10.25127/riagrop.20214.718> 
 
