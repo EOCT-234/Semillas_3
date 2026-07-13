@@ -7,4 +7,22 @@ format:
     number-sections: false
 ---
 
-![](images/resumen.png)
+# Referencias
+
+Asrat, U., & Abera, D. (2025). Production and overall importance of common bean (*Phaseolus vulgaris* L.) in Ethiopia. Cogent Food & Agriculture, 11(1), 2548619. <https://doi.org/10.1080/23311932.2025.2548619> 
+
+Gamarra, M. (2021). Desarrollo de una nueva variedad de frijol arbustivo, clase comercial poroto, para expandido denominado INIA-Huayna. Revista de investigación Agropecuaria Science and Biotechnology, 1(4), 18-29. <https://doi.org/10.25127/riagrop.20214.718> 
+
+González Rodríguez, F., León Gómez, D., Borges Gómez, L., Pinzón López, L., Magaña Magaña, M., Sangines García, R., & Urrestarazu Gavilán, M. (2018). Envejecimiento acelerado sobre la calidad de semillas de maíz para producir germinados para forraje alternativo. Revista Mexicana de Ciencias Agrícolas, (8), 1487-1493. <https://doi.org/10.29312/remexca.v0i8.1107> 
+
+Lu, S., Guojun, F., Dajun, L., Xiaoxu, Y., Chang, L., & Zhishan, Y. (2021). Physiological and Biochemical Mechanism of Ultra-dry Storage Treatment to Prolong Seed Life of Phaseolus vulgaris. Chinese Agricultural Science Bulletin, 37(34), 64-70. <https://doi.org/10.11924/j.issn.1000-6850.casb2021-0036> 
+
+Martins, G., Catão, H., Caixeta, F., Castilho, Í., & Marinke, L. (2021). Evaluation of pea seed vigor by the accelerated aging and controlled deterioration tests. Comunicata Scientiae, 12(e3252). [https://doi.org/https://doi.org/10.14295/cs.v12.3252](https://www.comunicatascientiae.com.br/comunicata/article/view/3252) 
+
+Pérez-Sánchez, L. E., Ayala-Guerrero, L. M., Mendieta-Moctezuma, A., Villalobos-López, M. A., & Ríos- Meléndez, S. (2026). Stress-Induced Plant Specialized Metabolism: Signaling, Multi-Omics Integration, and Plant-Derived Antimicrobial Metabolites to Combat Antimicrobial Resistance. Plants, 15(2), 193. <https://doi.org/10.3390/plants15020193> 
+
+Raeisi, R., Parashkoohi, M. G., Afshari, H., & Mohammadi, A. (2025). Enhancing pinto bean planting systems: A multi-objective genetic algorithm approach for evaluating energy efficiency and environmental impact. Energy Nexus, 19, 100492. <https://doi.org/10.1016/j.nexus.2025.100492> 
+
+Reed, R. C., Bradford, K. J., & Khanday, I. (2022). Seed germination and vigor: Ensuring crop sustainability in a changing climate. Heredity, 128(6), 450-459. <https://doi.org/10.1038/s41437-022-00497-2> 
+
+Wang, N., Yuan, M., & Chen, H. (2021). Effects of Artificial Aging on Seed Vigor and Physiological Characteristics of the Invasive Alien Plant *Aegilops tauschii*. Acta Societatis Botanicorum Poloniae, 90, 9010. [https://doi.org/10.5586/asbp.9010](https://www.researchgate.net/publication/356241432_Effects_of_Artificial_Aging_on_Seed_Vigor_and_Physiological_Characteristics_of_the_Invasive_Alien_Plant_Aegilops_tauschii)
