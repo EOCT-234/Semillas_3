@@ -1,0 +1,10 @@
+---
+format:
+  html:
+    mainfont: Tinos
+    title-block-banner: false
+    toc: false
+    number-sections: false
+---
+
+![](images/resumen.png)

@@ -30,93 +30,560 @@ source('https://inkaverse.com/setup.r')
 # Data import
 
 ```{r}
-gs <- "url" %>% 
+gs <- "https://docs.google.com/spreadsheets/d/1I2GF6kSyilaZwi7kzY1iLJfPXlWKYuiNDqL3lsMwn_M/edit?gid=87393723#gid=87393723" %>% 
   as_sheets_id()
 
 fb <- gs %>% 
   range_read(ss = .,sheet = "fb")
 ```
 
-# Research Objectives
+#Cálculo de índices de germinación
+```{r}
+# Install packages and dependencies
 
-> Matrix URL
+library(GerminaR)
+library(factoextra)
+library(dplyr)
 
-## RO 1
+# Prosopis data set
+
+fb %>% 
+   head(10) %>% 
+   kable(caption = "fb_dataset")
+```
 
 ```{r}
 
+# germination analysis (ten variables)
+
+gsm <- ger_summary(factors = c("germinacion")
+                   , SeedN = "seeds"
+                   , evalName = "D"
+                   , cumulative = FALSE
+                   , data = fb
+                   )
+
+# Prosopis data set processed
+
+gsm %>% 
+  head(10) %>% 
+  mutate(across(where(is.numeric), ~round(., 2))) %>% 
+  kable(caption = "Function ger_summary performe ten germination indices")
 ```
 
-## RO 2
+# Anova
+$$y = media + germinación + error$$
+##Porcentaje de germinación
+```{r}
+# analysis of variance
+
+av_grp <- aov(grp ~ germinacion, data = gsm)
+Anova(av_grp)
+
+# mean comparison test
+
+mc_grp <- ger_testcomp(aov = av_grp
+                       , comp = c("germinacion")
+                       , type = "tukey"
+                       )
+
+# data result
+
+mc_grp$table %>% 
+  mutate(
+    across(where(is.numeric), ~ round(., 2))
+  ) %>% 
+  kable(
+    caption = "Comparison of germination percentage among scarification treatments using Tukey test"
+  )
+```
+
 
 ```{r}
+library(GerminaR)
+#Gráfico
+grp <- mc_grp$table %>% 
+   fplot(data = .
+       , type = "bar"
+       , x = "germinacion"
+       , y = "grp"
+       , group = NULL
+       , ylimits = c(0, 120, 20)
+       , ylab = "Germinación ('%')"
+       , xlab = F
+       , legend = "none"
+       , sigsize = 4
+       , error = "ste"
+       , sig = "sig"
+       , color = T
+       )+ 
+  theme(
+    axis.title.x = element_text(size = 8),  # título eje X
+    axis.title.y = element_text(size = 9, face = "bold"),  # título eje Y
+    axis.text.x = element_text(size = 12),   # números/categorías eje X
+    axis.text.y = element_text(size = 10)    # números eje Y
+  )
+
+grp$layers[[1]]$aes_params$width <- 0.6
+
+grp
+
+ ggsave(plot =, "design/grp.jpg")
+```
+
+
+
+##Velocidad de germinación
+```{r}
+# analysis of variance
+
+avgsp <- aov(gsp ~ germinacion, data = gsm)
+Anova(avgsp)
+
+# mean comparison test
+
+mc_gsp <- ger_testcomp(aov = avgsp
+                       , comp = c("germinacion")
+                       , type = "tukey"
+                       )
+
+# data result
+
+mc_gsp$table %>% 
+  mutate(
+    across(where(is.numeric), ~ round(., 2))
+  ) %>% 
+  kable(
+    caption = "Comparación de la velocidad de germinación mediante tratamientos de escarificación usando la prubea de Tukey"
+  )
+```
+
+
+```{r}
+#Gráfico
+gsp <- mc_gsp$table %>% 
+   fplot(data = .
+       , type = "bar"
+       , x = "germinacion"
+       , y = "gsp"
+       , group = NULL
+       , ylimits = c(0, 2.4, 0.2)
+       , ylab = "Velocidad de germinación ('%')"
+       , xlab = F
+       , legend = "none"
+       , sigsize = 4
+       , error = "ste"
+       , sig = "sig"
+       , color = T
+       )+ 
+  theme(
+    axis.title.x = element_text(size = 8),  # título eje X
+    axis.title.y = element_text(size = 9, face = "bold"),  # título eje Y
+    axis.text.x = element_text(size = 12),   # números/categorías eje X
+    axis.text.y = element_text(size = 10)    # números eje Y
+  )
+
+gsp$layers[[1]]$aes_params$width <- 0.6
+
+gsp
+
+ ggsave(plot =, "design/gsp.jpg")
+```
+
+##Tiempo medio de germinación
+```{r}
+## Mean Germination Time (MGT)
+
+# analysis of variance
+
+avmgt <- aov(mgt ~ germinacion, data = gsm)
+anova(avmgt)
+
+# mean comparison test
+
+mc_mgt <- ger_testcomp(aov = avmgt
+                       , comp = c("germinacion")
+                       , type = "tukey")
+
+# data result
+
+mc_mgt$table %>% 
+  mutate(
+    across(where(is.numeric), ~ round(., 2))
+  ) %>% 
+  kable(
+    caption = "Comparación del tiempo medio de germinación"
+  )
+```
+
+```{r}
+#Gráfico
+
+# bar graphics for mean germination time
+
+mgt <- mc_mgt$table %>% 
+  fplot(data = .
+       , type = "bar" 
+       , x = "germinacion"
+       , y = "mgt"
+       , group = NULL
+       , ylimits = c(0,75, 15)
+       , ylab = "Tiempo medio de germinación (horas)"
+       , xlab = F
+       , sig = "sig"
+       , error = "ste"
+       , color = T
+       , legend = "none"
+       )+ 
+  theme(
+    axis.title.x = element_text(size = 8),  # título eje X
+    axis.title.y = element_text(size = 8.5, face = "bold"),  # título eje Y
+    axis.text.x = element_text(size = 12),   # números/categorías eje X
+    axis.text.y = element_text(size = 8)    # números eje Y
+  )
+
+mgt$layers[[1]]$aes_params$width <- 0.6
+
+mgt
+
+ ggsave(plot =, "design/mgt.jpg")
+```
+
+
+##Sincronía de germinación
+```{r}
+# analysis of variance
+
+avsyn <- aov(syn ~ germinacion, data = gsm)
+anova(avsyn)
+
+# mean comparison test
+
+mc_syn <- ger_testcomp(aov = avsyn
+                       , comp = c("germinacion")
+                       , type = "tukey")
+
+# data result
+
+mc_syn$table %>% 
+  mutate(
+    across(where(is.numeric), ~ round(., 2))
+  ) %>% 
+  kable(
+    caption = "Comparación de la sincronización"
+  )
+
 
 ```
+
+```{r}
+#Gráfico
+
+# bar graphics for mean germination time
+
+syn <- mc_syn$table %>% 
+   fplot(data = .
+       , type = "bar" 
+       , x = "germinacion"
+       , y = "syn"
+       , group = NULL
+       , ylimits = c(0,1.2, 0.2)
+       , ylab = "Índice de sincronía de germinación"
+       , xlab = F
+       , sig = "sig"
+       , error = "ste"
+       , color = T
+       , legend = "none"
+       ) + 
+  theme(
+    axis.title.x = element_text(size = 8),  # título eje X
+    axis.title.y = element_text(size = 8.5, face = "bold"),  # título eje Y
+    axis.text.x = element_text(size = 12),   # números/categorías eje X
+    axis.text.y = element_text(size = 10)    # números eje Y
+  )
+
+
+syn$layers[[1]]$aes_params$width <- 0.6
+
+syn
+
+
+ ggsave(plot =, "design/syn.jpg")
+```
+
+#Unir imagenes
+```{r}
+library(cowplot)
+
+# Extraer la leyenda de uno de los gráficos
+leyenda <- get_legend(
+  grp + 
+    labs(fill = "Tratamientos de envejecimiento acelerado (horas)") +
+    theme(legend.position = "top")
+)
+
+# Quitar leyendas de los gráficos individuales
+grp2 <- grp + theme(legend.position = "none")
+mgt2 <- mgt + theme(legend.position = "none")
+gsp2 <- gsp + theme(legend.position = "none")
+syn2 <- syn + theme(legend.position = "none")
+
+# Unir gráficos
+plot_varger <- plot_grid(
+  plot_grid(grp2, mgt2, gsp2, syn2, ncol = 2, labels = "auto"),
+  leyenda,
+  ncol = 1,
+  rel_heights = c(6, 0.9)
+)
+
+plot_varger
+
+ggsave(
+  plot = plot_varger,
+  filename = "design/ver_ger.jpg",
+  units = "cm",
+  width = 30,
+  height = 15
+)
+```
+
+
+#PCA de germinación
+```{r}
+#| eval: false
+
+dtx <- gsm [, c(4,16, 17, 19, 21)]
+
+#extracción de factores y variables
+
+names(dtx)
+
+data_pca <- dtx
+
+pca_datos <- data_pca %>%
+  group_by(across(1)) %>% 
+  summarise(across(1:4, mean, na.rm = TRUE))
+
+#En caso haya unidades NA en la base de datos
+
+pca_datos[is.na(pca_datos)] <- 0
+
+```
+
+  
+```{r}
+library(factoextra)
+library(ggrepel)
+library(cowplot)
+
+mv <- PCA(
+  X = pca_datos[, 2:5],
+  scale.unit = TRUE,
+  graph = FALSE
+)
+
+# Variables
+var <- fviz_pca_var(
+  mv,
+  col.var = "cos2",
+  gradient.cols = c("blue", "red", "darkgreen"),
+  repel = TRUE
+)
+
+var
+
+ind <- fviz_pca_ind(
+  mv,
+  habillage = pca_datos$germinacion,
+  palette = c("blue", "red", "darkgreen", "orange"),
+  addEllipses = FALSE,
+  repel = TRUE,
+  label = "none", 
+  legend.title = "Tratamientos"
+)
+
+ind
+
+#Poner los nombres de los ind
+#ind <- ind + 
+#geom_text_repel(
+ #   aes(
+  #    x = mv$ind$coord[, 1],
+   #   y = mv$ind$coord[, 2],
+    #  label = pca_datos$germinacion
+    #),
+    #size = 4,
+    #show.legend = FALSE
+  #)
+
+# combinar
+plot <- list(var, ind) %>% 
+  plot_grid(plotlist = ., ncol = 2, labels = "auto")
+
+plot
+
+ggsave(
+  plot = plot,
+  filename = "design/PCA.jpg",
+  units = "cm",
+  width = 30,
+  height = 15
+)
+```
+
+#Vigor
+```{r}
+vigor <- fb [, c(2, 4,19, 20, 21, 22, 23)]
+#Calculo de media de vigor
+vigor$longrad_media <- rowMeans(vigor[, grep("^longrad_8_", names(vigor))], na.rm = TRUE)
+```
+
+##ANOVA
+```{r}
+aov_vigor <- aov(longrad_media ~ germinacion, data = vigor)
+Anova(aov_vigor)
+
+# mean comparison test
+
+vigor_commed <- ger_testcomp(aov = aov_vigor
+                       , comp = c("germinacion")
+                       , type = "tukey")
+
+# data result
+
+vigor_commed$table %>% 
+  mutate(
+    across(where(is.numeric), ~ round(., 2))
+  ) %>% 
+  kable(
+    caption = "Comparación de la longitud de radícula"
+  )
+
+
+```
+
+```{r}
+# bar graphics for mean germination time
+
+vigor_graf <- vigor_commed$table %>% 
+   fplot(data = .
+       , type = "bar" 
+       , x = "germinacion"
+       , y = "longrad_media"
+       , group = NULL
+       , ylimits = c(0,60, 10)
+       , ylab = "Longitud media de la radícula (mm)"
+       , xlab = "Tratamientos de envejecimiento (horas)"
+       , sig = "sig"
+       , error = "ste"
+       , color = T
+       , legend = "none"
+       )+ 
+  theme(
+    axis.title.x = element_text(size = 8),  # título eje X
+    axis.title.y = element_text(size = 8),  # título eje Y
+    axis.text.x = element_text(size = 8),   # números/categorías eje X
+    axis.text.y = element_text(size = 8)    # números eje Y
+  )
+
+
+vigor_graf$layers[[1]]$aes_params$width <- 0.6
+
+vigor_graf
+
+ ggsave(plot =, "design/vigor_graf.jpg")
+```
+
+#Arreglo para PCA
+```{r}
+PCA_multivariado <- gsm [ c( 2, 4, 16, 17, 19, 21)] %>% 
+#agregar columna longrad_media de la tabla vigor
+cbind(vigor [ c( 8)] )
+```
+
 
 # PCA
 
 ```{r}
 #| eval: false
 
-dtx <- fb
+dtx_mult <- PCA_multivariado
 
-# str(dtx)
+#extracción de factores y variables
+
+names(dtx_mult)
+
+data_pca_mult <- dtx_mult
+
+pca_datos_mult <- data_pca_mult %>%
+  group_by(across(2)) %>% 
+  summarise(across(1:6, mean, na.rm = TRUE))
+
+#En caso haya unidades NA en la base de datos
+
+pca_datos_mult[is.na(pca_datos_mult)] <- 0
+
+```
+
   
-mv <- PCA(X = dtx, scale.unit = T, graph = F)
+```{r}
+library(factoextra)
+library(ggrepel)
+library(cowplot)
 
-fviz_pca_var(mv, col.var = "cos2"
-             , gradient.cols = inti:::paleta()
-             , repel = TRUE
-             )
+mv_mult <- PCA(
+  X = pca_datos_mult[, 3:7],
+  scale.unit = TRUE,
+  graph = FALSE
+)
 
-var <- plot.PCA(mv, choix = c("var"), cex=0.7, )
+# Variables
+var_mult <- fviz_pca_var(
+  mv_mult,
+  col.var = "cos2",
+  gradient.cols = c("blue", "red", "darkgreen"),
+  repel = TRUE
+)
 
-ind <- plot.PCA(mv, choix = c("ind")
-                , cex = 0.5
-                , label = "ind"
-                , invisible = "quali"
-                )
+var_mult
 
-plot <- list(var, ind) %>% 
-  plot_grid(plotlist = ., ncol = 2, labels = "auto") %>% 
-  ggsave(plot = ., "manuscript/PCA.jpg", units = "cm"
-                , width = 30, height = 15)
+ind_mult <- fviz_pca_ind(
+  mv_mult,
+  habillage = pca_datos_mult$germinacion,
+  palette = c("blue", "red", "darkgreen", "orange"),
+  addEllipses = FALSE,
+  repel = TRUE,
+  label = "none", 
+  legend.title = "Tratamientos"
+)
 
-plot %>% include_graphics()
+ind_mult
 
-pcainfo <- factoextra::get_pca(mv)
+#Poner los nombres de los ind
+#ind <- ind + 
+#geom_text_repel(
+ #   aes(
+  #    x = mv$ind$coord[, 1],
+   #   y = mv$ind$coord[, 2],
+    #  label = pca_datos$germinacion
+    #),
+    #size = 4,
+    #show.legend = FALSE
+  #)
 
-sink("files/pca.txt")
-cat("\nPrincipal Component Analysis Results\n")
-summary(mv, nbelements = Inf, nb.dec = 2)
-cat("\nCorrelations between variables and dimensions\n")
-mv$cor
-cat("\nContributions of the variables\n")
-mv$contrib
-sink()
+# combinar
+plot <- list(var_mult, ind_mult) %>% 
+  plot_grid(plotlist = ., ncol = 2, labels = "auto")
 
-cls <- HCPC(mv, graph = F
-            , nb.clust = -1
-            , metric = "euclidean"
-            , method = "ward"
-            )
+plot
 
-sink("files/hcpc.txt")
-cat("\nHierarchical Clustering on Principal Components\n")
-cls$call$t$tree
-cls$desc.ind
-cls$desc.var
-sink()
-
-map <- \() {plot(cls, choice = "map", draw.tree = FALSE)}
-cir <- fviz_dend(cls, type = "circular", cex = 0.5)
-
-plot <- list(map, cir) %>% 
-  plot_grid(plotlist = ., ncol = 2, labels = "auto") %>% 
-  ggsave(plot = ., "manuscript/HCPC.jpg", units = "cm"
-                , width = 30, height = 15)
-
-plot %>% include_graphics()
+ggsave(
+  plot = plot,
+  filename = "design/PCA_mult.jpg",
+  units = "cm",
+  width = 30,
+  height = 15
+)
 ```
 
 # References
