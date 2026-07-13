@@ -1,0 +1,15 @@
+---
+format:
+  html:
+    mainfont: Tinos
+    title-block-banner: false
+    toc: false
+    number-sections: false
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+# Conclusiones
+
+En el envejecimiento acelerado aplicado en las semillas de frijol chaucha no se obtuvieron diferencias significativas, demostrando que las semillas de frijol chaucha tienen alta resistencia al estrés provocado por la temperatura y la humedad. Finalmente, aunque la  viabilidad se mantuvo la calidad interna de las semillas solo se vió afectado el vigor que fue disminuyendo lentamente.
