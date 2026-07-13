@@ -1,0 +1,12 @@
+---
+format:
+  html:
+    mainfont: Tinos
+    title-block-banner: false
+    toc: false
+    number-sections: false
+---
+
+# Materiales y métodos
+
+La semilla de frijol chaucha fue obtenida de Ocumal en la provincia de Luya, estuvieron almacenadas por dos semanas. Se colocaron 300 gramos (g) en una placa petri y se colocó a 42 °C en una estufa con una aplicación de agua de 5 ml para simular alta humedad relativa. El tiempo que estuvieron en la estufa fue determinado según los tratamientos: 72 horas, 48 horas, 24 horas y 0 horas (testigo) con cuatro repeticiones cada uno, obteniendo al final 16 unidades experimentales. Luego de pasado el tiempo por tratamiento, se realizó la siembra en tapers de plástico de 6 oz con dos capas de papel toalla en el fondo, finalmente se colocaron 25 semillas en cada unidad experimental con aplicaciones de 2 ml de agua destilada al día. La germinación se anotó en un libro de campo digital y se evaluó por 8 días y al finalizar se midió la longitud de la radícula de 5 semillas seleccionadas al azar. El análisis de datos se realizó en el software R, realizando el cálculo de los índices de germinación: porcentaje de germinación (%), tiempo medio de germinación (horas), velocidad de germinación (%) e índice de sincronía de germinación. Luego se realizó el análisis anova (p\<0.05) y comparación de medias con la prueba de Tukey (p\<0.05) para cada índice de germinación calculado y la longitud de radícula. Finalmente, se realizó un análisis de componentes principales (PCA) con los índices de germinación y la longitud de radícula.

@@ -1,0 +1,16 @@
+---
+format:
+  html:
+    mainfont: Tinos
+    title-block-banner: false
+    toc: false
+    number-sections: false
+---
+
+# Introducción
+
+El frijol (*Phaseolus vulgaris* L.) es una leguminosa importante de la dieta de millones de personas [(Reed et al., 2022)](https://www.zotero.org/google-docs/?lZkmGq). A nivel mundial, se cultivan 5 especies para consumo humano [(Asrat & Abera, 2025)](https://www.zotero.org/google-docs/?dtgnbO), con una producción anual que supera los 30 millones de toneladas [(Raeisi et al., 2025)](https://www.zotero.org/google-docs/?r88olc). En el país, el frijol se cultiva en 200,000 hectáreas aproximadamente [(Gamarra, 2021)](https://www.zotero.org/google-docs/?xtvWMn). Entre las variedades está el frijol chaucha que es cultivado con semilla que se conserva de una temporada de cosecha a otra.
+
+Durante ese periodo de almacenamiento, las semillas presentan alteraciones físicas como afección por plagas, baja ventilación, exposición  a luz y alteraciones fisiológicas y bioquímicas como reducción enzimática, disminución de capacidad germinativa [(Lu et al., 2021)](https://www.zotero.org/google-docs/?uShNr8). Frente a ello el envejecimiento acelerado es un procedimiento que se emplea para evaluar la calidad fisiológica de las semillas mediante la exposición de estas a condiciones controladas de alta temperatura (42°C) y humedad relativa, que simula el deterioro durante periodos prolongados de almacenamiento [(Martins et al., 2021)](https://www.zotero.org/google-docs/?pgjvSR).
+
+En ese contexto, el presente trabajo tiene como objetivo evaluar el efecto del envejecimiento acelerado sobre la germinación y el vigor de las semillas de frijol chaucha (Phaseolus vulgaris L.) medido por la respuesta de las semillas frente a diferentes periodos de exposición a altas temperaturas.
